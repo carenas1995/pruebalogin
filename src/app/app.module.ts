@@ -10,6 +10,7 @@ import { MessagesModule } from 'primeng/messages';
 import { ToastModule } from 'primeng/toast';
 import { TableModule } from 'primeng/table';
 import { HomeComponent } from './home/home.component';
+import { ConfirmationService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { HomeComponent } from './home/home.component';
     TableModule,
     MessagesModule
   ],
-  providers: [],
+  providers: [ConfirmationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -42,22 +42,41 @@ export class UsuariosComponent implements OnInit {
       { field: 'pagWeb', header: 'pagWeb', sort: false },
       { field: 'accion', header: 'accion', sort: false }
     ];
+    this.online(0)
+  }
 
-    this.http.get("../../../assets/data.json").subscribe((data: any[]) => {
-      this.listUsuarios = data.sort(function (a, b) {
-        return Number(b.codCli) - Number(a.codCli);
-      });
-      setTimeout(() => {
-        this.cargando = false;
-      }, 2000);
-    });
-
-    /*this.userService.getUsers().subscribe(res2 => {
-      this.listUsuarios = res2.sort(function (a, b) {
+  online(i: number) {
+    if (i == 0) {
+      var local = sessionStorage.getItem('list');
+      if (local == null) {
+        this.http.get("../../../assets/data.json").subscribe((data: any[]) => {
+          this.listUsuarios = data.sort(function (a, b) {
+            return Number(b.codCli) - Number(a.codCli);
+          });
+          sessionStorage.setItem('list', JSON.stringify(this.listUsuarios));
+          setTimeout(() => {
+            this.cargando = false;
+          }, 2000);
+        });
+      }
+      else {
+        var data = JSON.parse(local);
+        this.listUsuarios = data.sort(function (a, b) {
+          return Number(b.codCli) - Number(a.codCli);
+        });
+        setTimeout(() => {
+          this.cargando = false;
+        }, 2000);
+      }
+    }
+    else {
+      this.userService.getUsers().subscribe(res2 => {
+        this.listUsuarios = res2.sort(function (a, b) {
           return Number(b.codCli) - Number(a.codCli);
         });
         this.cargando = false;
-    });*/
+      });
+    }
   }
 
   add() {

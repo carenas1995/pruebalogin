@@ -20,11 +20,21 @@ export class HomeComponent implements OnInit {
       password: "P@ssw0rd",
       connectionName: "DataPower"
     }
-    this.userService.login(this.user).subscribe(res => {
-        this.router.navigateByUrl('/', { skipLocationChange: true, replaceUrl: true }).then(() => {
-           this.router.navigate(['usuarios']);
-         });
-    });
+    this.online(1);
+  }
 
+  online(i: number) {
+    if (i == 0) {
+      this.userService.login(this.user).subscribe(res => {
+        this.router.navigateByUrl('/', { skipLocationChange: true, replaceUrl: true }).then(() => {
+          this.router.navigate(['usuarios']);
+        });
+      });
+    }
+    else {
+      setTimeout(() => {
+        this.router.navigate(['usuarios']);
+      }, 2000);
+    }
   }
 }
