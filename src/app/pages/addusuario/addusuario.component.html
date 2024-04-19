@@ -1,0 +1,111 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div style="margin: auto;">
+      <h2><b>{{ tittle }}</b></h2>
+      <br>
+      <button class="succesbutton" icon="fa fa-plus" label="Agregar" type="button" pButton (click)="back()"
+        data-toggle="tooltip">Regresar</button>
+      <br><br>
+      <div class="col-md-12">
+        <div class="col-md-4">
+          <label>codCli:</label>
+          <input type="text" pInputText class="form-control" size="40" placeholder="Ingrese Dato"
+            [(ngModel)]="usuario.codCli" [disabled]="true" />
+        </div>
+        <div class="col-md-4">
+          <label>nomCli:</label>
+          <input type="text" pInputText class="form-control" size="40" placeholder="Ingrese Dato"
+            [(ngModel)]="usuario.nomCli" />
+        </div>
+        <div class="col-md-4">
+          <label>tipIde:</label>
+          <input type="text" pInputText class="form-control" size="40" placeholder="Ingrese Dato"
+            [(ngModel)]="usuario.tipIde" />
+        </div>
+        <div class="col-md-4">
+          <label>nitCli:</label>
+          <input type="text" pInputText class="form-control" size="40" placeholder="Ingrese Dato"
+            [(ngModel)]="usuario.nitCli" />
+        </div>
+        <div class="col-md-4">
+          <label>digVer:</label>
+          <input type="text" pInputText class="form-control" size="40" placeholder="Ingrese Dato"
+            [(ngModel)]="usuario.digVer" />
+        </div>
+        <div class="col-md-4">
+          <label>codCiu:</label>
+          <input type="text" pInputText class="form-control" size="40" placeholder="Ingrese Dato"
+            [(ngModel)]="usuario.codCiu" />
+        </div>
+        <div class="col-md-4">
+          <label>codDep:</label>
+          <input type="text" pInputText class="form-control" size="40" placeholder="Ingrese Dato"
+            [(ngModel)]="usuario.codDep" />
+        </div>
+        <div class="col-md-4">
+          <label>codPai:</label>
+          <input type="text" pInputText class="form-control" size="40" placeholder="Ingrese Dato"
+            [(ngModel)]="usuario.codPai" />
+        </div>
+        <div class="col-md-4">
+          <label>di1Cli:</label>
+          <input type="text" pInputText class="form-control" size="40" placeholder="Ingrese Dato"
+            [(ngModel)]="usuario.di1Cli" />
+        </div>
+        <div class="col-md-4">
+          <label>te1Cli:</label>
+          <input type="text" pInputText class="form-control" size="40" placeholder="Ingrese Dato"
+            [(ngModel)]="usuario.te1Cli" />
+        </div>
+        <div class="col-md-4">
+          <label>tipCli:</label>
+          <input type="text" pInputText class="form-control" size="40" placeholder="Ingrese Dato"
+            [(ngModel)]="usuario.tipCli" />
+        </div>
+        <div class="col-md-4">
+          <label>fecIng:</label>
+          <input type="text" pInputText class="form-control" size="40" placeholder="Ingrese Dato"
+            [(ngModel)]="usuario.fecIng" />
+        </div>
+        <div class="col-md-4">
+          <label>eMail:</label>
+          <input type="text" pInputText class="form-control" size="40" placeholder="Ingrese Dato"
+            [(ngModel)]="usuario.eMail" />
+        </div>
+        <div class="col-md-4">
+          <label>ap1Cli:</label>
+          <input type="text" pInputText class="form-control" size="40" placeholder="Ingrese Dato"
+            [(ngModel)]="usuario.ap1Cli" />
+        </div>
+        <div class="col-md-4">
+          <label>nom1Cli:</label>
+          <input type="text" pInputText class="form-control" size="40" placeholder="Ingrese Dato"
+            [(ngModel)]="usuario.nom1Cli" />
+        </div>
+        <div class="col-md-4">
+          <label>tipPer:</label>
+          <input type="text" pInputText class="form-control" size="40" placeholder="Ingrese Dato"
+            [(ngModel)]="usuario.tipPer" />
+        </div>
+        <div class="col-md-4">
+          <label>estCli:</label>
+          <input type="text" pInputText class="form-control" size="40" placeholder="Ingrese Dato"
+            [(ngModel)]="usuario.estCli" />
+        </div>
+        <div class="col-md-4">
+          <label>codCliExtr:</label>
+          <input type="text" pInputText class="form-control" size="40" placeholder="Ingrese Dato"
+            [(ngModel)]="usuario.codCliExtr" />
+        </div>
+        <div class="col-md-4">
+          <label>pagWeb:</label>
+          <input type="text" pInputText class="form-control" size="40" placeholder="Ingrese Dato"
+            [(ngModel)]="usuario.pagWeb" />
+        </div>
+      </div>
+      <div class="col-md-12">
+        <button class="succesbutton" icon="fa fa-plus" label="Agregar" type="button" pButton (click)="submit()"
+          data-toggle="tooltip" style="margin: auto;">Guardar</button>
+      </div>
+    </div>
+  </div>

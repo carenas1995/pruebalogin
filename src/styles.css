@@ -1,0 +1,51 @@
+/* +++++++ Prime NG CHIPS +++++++ */
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    font-size: 1.5em;
+}
+
+.principal {
+    background-color: #00913c;
+    max-height: 10vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+.bodytech {
+    margin-top: 10vh;
+}
+
+.col-header {
+    border: #000 1px solid;
+    color: #fff;
+    background-color: #00913c;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.col-column {
+    border: 1px solid;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.succesbutton {
+    min-width: 2vw;
+    min-height: 2vw;
+    border-radius: 0.5vw;
+    background: #00913c;
+    color: #fff;
+    font-size: large;
+    cursor: pointer;
+}
+
+.ui-paginator .ui-paginator-page,
+.ui-paginator .ui-paginator-icon {
+    color: #00913c;
+}
